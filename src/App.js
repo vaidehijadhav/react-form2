@@ -22,11 +22,18 @@ function App() {
       ...prev, 
       [name]: type === "checkbox" ? checked : value,
   }));
-
   }
+
+  function submitHandler(event){
+    event.preventDefault();
+
+    console.log("Finally printing the value of form data");
+    console.log(formData);
+  };
+  
   return (
     <div className='flex flex-col items-center mt-2'>
-      <form >
+      <form onSubmit={submitHandler}>
         <label htmlFor='firstName'>First Name</label>
         <br/>
         <input type='text' placeholder='vaidehi'
