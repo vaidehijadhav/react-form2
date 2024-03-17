@@ -11,7 +11,8 @@ function App() {
     city: "",
     state: "",
     postalCode: "", 
-    comments: false, candidates: false, offers: false
+    comments: false, candidates: false, offers: false,
+    pushNotifications: ""
   })
 
   function changeHandler(event){
@@ -102,6 +103,8 @@ function App() {
         onChange={changeHandler}
         className='outline'/>
 
+        <br/>
+
         <fieldset>
           <legend>By Email</legend>
           <div className='flex'>
@@ -133,6 +136,40 @@ function App() {
               <p>Get notified when a  candidate accepts or rejects an offer.</p>
             </div>
           </div>
+        </fieldset>
+
+        <br/>
+
+        <fieldset>
+          <legend>Push Notification</legend>
+          <p>These are delivered via SMS to your mobile phone.</p>
+
+          <input
+          type='radio'
+          id='pushEverything' name='pushNotification'
+          value='Everything'
+          onChange={changeHandler}/>
+
+          <label htmlFor='pushEverything'>Everything</label>
+
+          <br/>
+
+          <input
+          type='radio'
+          id='pushEmail' name='pushNotification'
+          value='Same as email'
+          onChange={changeHandler}/>
+
+          <label htmlFor='pushEmail'>Same as email</label>
+
+          <br/>
+          <input
+          type='radio'
+          id='pushNothing' name='pushNotification'
+          value='No push notifications'
+          onChange={changeHandler}/>
+
+          <label htmlFor='pushNothing'>No push notification</label>
         </fieldset>
       </form>
     </div>
