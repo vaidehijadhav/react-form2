@@ -30,7 +30,7 @@ function App() {
     console.log("Finally printing the value of form data");
     console.log(formData);
   };
-  
+
   return (
     <div className='flex flex-col items-center mt-2'>
       <form onSubmit={submitHandler}>
@@ -153,7 +153,7 @@ function App() {
 
           <input
           type='radio'
-          id='pushEverything' name='pushNotification'
+          id='pushEverything' name='pushNotifications'
           value='Everything'
           onChange={changeHandler}/>
 
@@ -163,7 +163,7 @@ function App() {
 
           <input
           type='radio'
-          id='pushEmail' name='pushNotification'
+          id='pushEmail' name='pushNotifications'
           value='Same as email'
           onChange={changeHandler}/>
 
@@ -172,7 +172,7 @@ function App() {
           <br/>
           <input
           type='radio'
-          id='pushNothing' name='pushNotification'
+          id='pushNothing' name='pushNotifications'
           value='No push notifications'
           onChange={changeHandler}/>
 
