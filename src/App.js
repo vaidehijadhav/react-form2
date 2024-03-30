@@ -112,7 +112,8 @@ function App() {
 
         <br/>
 
-        <fieldset>
+        {/* fieldset is used to group so many elements together */}
+        <fieldset>                            
           <legend>By Email</legend>
           <div className='flex'>
             <input id='comments' name='comments' type='checkbox' 
